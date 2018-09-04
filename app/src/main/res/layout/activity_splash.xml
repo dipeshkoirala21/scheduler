@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/splash3"
+    android:layout_gravity="center"
+    android:id="@+id/lin_lay"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/iv"
+        android:layout_below="@+id/iv"
+        android:layout_marginTop="1dp"
+        android:textColor="#353434"
+        android:text="A Smart Solution to"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv"
+        android:layout_below="@+id/tv"
+        android:layout_marginStart="64dp"
+        android:text="Time Management"
+        android:textColor="#b00009"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+
+</RelativeLayout>
+

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background">
+
+    <TextView
+        android:id="@+id/pop_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/radio1"
+        android:layout_marginTop="89dp"
+        android:fontFamily="cursive"
+        android:text="Add Data"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_keyword"
+        android:layout_alignBottom="@+id/text_keyword"
+        android:layout_alignEnd="@+id/btn_sd"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/text_keyword"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="textPersonName"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text_keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txt_orient"
+        android:layout_below="@+id/pop_text"
+        android:layout_marginTop="47dp"
+        android:fontFamily="cursive"
+        android:text="Enter Keyword :"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_orient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_keyword"
+        android:layout_marginTop="56dp"
+        android:layout_toStartOf="@+id/pop_text"
+        android:fontFamily="cursive"
+        android:text="Orientation :"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="20sp" />
+
+    <RadioButton
+        android:id="@+id/radio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_orient"
+        android:layout_alignTop="@+id/txt_orient"
+        android:layout_centerHorizontal="true"
+        android:text="Horizontal"
+        android:textSize="12sp" />
+
+    <RadioButton
+        android:id="@+id/radio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/radio1"
+        android:layout_alignTop="@+id/txt_orient"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/radio1"
+        android:text="Vertical"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btn_sd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/radio2"
+        android:layout_below="@+id/radio1"
+        android:layout_marginTop="29dp"
+        android:text="Scan Data" />
+
+    <Button
+        android:id="@+id/btn_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_sd"
+        android:layout_alignBottom="@+id/btn_sd"
+        android:layout_alignStart="@+id/txt_orient"
+        android:layout_toStartOf="@+id/radio1"
+        android:text="Cancel" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_sd"
+        android:layout_toStartOf="@+id/btn_sd" />
+
+</RelativeLayout>
