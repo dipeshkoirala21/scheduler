@@ -12,7 +12,6 @@
         android:layout_height="match_parent" />
     <TextView
         android:id="@+id/text_view"
-        android:text=""
         android:layout_alignParentBottom="true"
         android:textColor="@android:color/white"
         android:textSize="20sp"

@@ -5,15 +5,18 @@
     android:id="@+id/btn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dipes.scheduler.PopupActivity">
+    tools:context="com.example.dipes.scheduler.PopUp">
 
-    <Button
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/add_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="22dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="16dp"
-        android:text="Add Data" />
+        app:backgroundTint="@color/ic_launcher_background"
+        android:src="@drawable/plus"/>
+
 </RelativeLayout>

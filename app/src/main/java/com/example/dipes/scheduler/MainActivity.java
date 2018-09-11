@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
             cameraSource = new CameraSource.Builder(getApplicationContext(), textRecognizer)
                     .setFacing(CameraSource.CAMERA_FACING_BACK)
-                    .setRequestedPreviewSize(1280, 1024)
+                    .setRequestedPreviewSize(720, 1280)
                     .setRequestedFps(2.0f)
                     .setAutoFocusEnabled(true)
                     .build();
@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
+
                 @Override
                 public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
 
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+
                 @Override
                 public void receiveDetections(Detector.Detections<TextBlock> detections) {
 
@@ -117,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void run() {
 
+                                //Text gets saved in string builder
 
                                 StringBuilder stringBuilder = new StringBuilder();
                                 for(int i =0;i<items.size();++i)

@@ -27,7 +27,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".windowpopup">
+        <activity android:name=".windowpopup"
+            android:theme="@style/AppTheme.CustomTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
