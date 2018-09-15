@@ -2,12 +2,15 @@ package com.example.dipes.scheduler;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.RectF;
+import android.opengl.Matrix;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.SparseArray;
+import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.TextView;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     CameraSource cameraSource;
     private static int SPLASH_TIME_OUT=4000;
     final int RequestCameraPermissionID = 1001;
+
 
 
 
@@ -65,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
 
             cameraSource = new CameraSource.Builder(getApplicationContext(), textRecognizer)
                     .setFacing(CameraSource.CAMERA_FACING_BACK)
-                    .setRequestedPreviewSize(720, 1280)
+                    .setRequestedPreviewSize(1080, 1280)
                     .setRequestedFps(2.0f)
-                    .setAutoFocusEnabled(true)
-                    .build();
+                    .setAutoFocusEnabled(true).build();
+
             cameraView.getHolder().addCallback(new SurfaceHolder.Callback() {
                 @Override
                 public void surfaceCreated(SurfaceHolder surfaceHolder) {
@@ -101,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
             });
 
-            textRecognizer.setProcessor(new Detector.Processor<TextBlock>() {
+                textRecognizer.setProcessor(new Detector.Processor<TextBlock>() {
                 @Override
                 public void release() {
 
@@ -151,5 +155,4 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
 }
